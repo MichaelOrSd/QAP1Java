@@ -14,7 +14,7 @@ public class TestAccount {
         Account accountB = new Account("B0123", "Account B", 1000);
 
         System.out.println("Account A has balance = " + accountA.getBalance());
-        System.out.println("Account A has balance = " + accountB.getBalance());
+        System.out.println("Account B has balance = " + accountB.getBalance());
         System.out.println("============================");
 
         accountA.credit(1000);
@@ -24,14 +24,14 @@ public class TestAccount {
         System.out.println("Account A has balance = " + accountA.getBalance());
 
         System.out.println("Credit $2000 in " + accountB.getName());
-        System.out.println("Account A has balance = " + accountB.getBalance());
+        System.out.println("Account B has balance = " + accountB.getBalance());
 
         System.out.println("============================");
 
         System.out.println("Transfer $1000 from Account B to Account A");
         accountB.transferTo(accountA, 1000);
         System.out.println("Account A has balance = " + accountA.getBalance());
-        System.out.println("Account A has balance = " + accountB.getBalance());
+        System.out.println("Account B has balance = " + accountB.getBalance());
         System.out.println("============================");
 
         System.out.println("Debit $100 from Account A");
