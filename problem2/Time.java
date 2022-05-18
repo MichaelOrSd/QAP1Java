@@ -37,7 +37,44 @@ public class Time {
     }
 
     public void setTime (int hour, int minute, int second) {
-        
-        
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+
+    public String toString () {
+        return hour + ":" + minute + ":" + second;
+    }
+
+    public Time nextSecond () {
+        second++;
+        if (second == 60) {
+            second = 0;
+            minute++;
+        }
+        if (minute == 60) {
+            minute = 0;
+            hour++;
+        }
+        if (hour == 24) {
+            hour = 0;
+        }
+        return this;
+    }
+
+    public Time previousSecond () {
+        second--;
+        if (second == -1) {
+            second = 59;
+            minute--;
+        }
+        if (minute == -1) {
+            minute = 59;
+            hour--;
+        }
+        if (hour == -1) {
+            hour = 23;
+        }
+        return this;
     }
 }
